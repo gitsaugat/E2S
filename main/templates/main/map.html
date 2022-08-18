@@ -1,0 +1,13 @@
+{%extends 'main/base.html'%} {%block content%}
+
+<div id="map" style="width: 100%; height: 800px"></div>
+<script>
+  mapboxgl.accessToken =
+    "pk.eyJ1IjoiZGV2aWx3b2xmIiwiYSI6ImNsNm02dnNnOTAwa2MzZG9mdHJ6bGR0YXMifQ.rOKon0cEdUGZcIzOjrCy-g";
+  var map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/devilwolf/cl6q3e3ik000b14pe6s2w815g",
+  });
+</script>
+
+{%endblock%}
