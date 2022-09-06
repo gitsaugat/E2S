@@ -1,0 +1,87 @@
+{%extends 'main/base.html'%} {%block content%}
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+        <div class="col-12 grid-margin">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Email Reports</h4>
+              <div class="table-responsive">
+                <table class="table text-align-center">
+                  <div class="text-center"><select class="form-control">
+                    <option value="1">Delete selected</option>
+                    <option value="1">Export selected</option>
+                    <option value="1">Print selected</option>
+                  </select></div>
+                  <thead>
+                   
+                    <tr>
+                      <th class="text-center">  <input onchange="checkCheckbox()"  type="checkbox" /> Select All</th>
+                      <th class="text-center">Customer Name</th>
+                      <th class="text-center">Vehicle No</th>
+                      <th class="text-center">Received From</th>
+                      <th class="text-center">Sent To</th>
+                      <th class="text-center">Status</th>
+                      <th class="text-center">Download Full Information</th>
+                      <th class="text-center">Export</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center"><input type="checkbox" id="checkbox_tick" /></td>
+  
+                      <td class="text-center">Alex Daniel</td>
+                      <td class="text-center">44567</td>
+                      <td class="text-center">test@email.com</td>
+                      <td class="text-center">test2@email.com</td>
+                      <td class="text-center"><i class="mdi mdi-check-underline-circle" /></i></td>
+                      <td class="text-center"><button class="btn btn-success">Download</button></td>
+                      <td class="text-center"><button class="btn btn-primary">Export</button></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><input type="checkbox" id="checkbox_tick" /></td>
+  
+                      <td class="text-center">Alex Daniel</td>
+                      <td class="text-center">44567</td>
+                      <td class="text-center">test@email.com</td>
+                      <td class="text-center">test2@email.com</td>
+                      <td class="text-center"><i class="mdi mdi-check-underline-circle" /></i></td>
+                      <td class="text-center"><button class="btn btn-success">Download</button></td>
+                        <td class="text-center"><button class="btn btn-primary">Export</button></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><input type="checkbox" id="checkbox_tick" /></td>
+  
+                      <td class="text-center">Alex Daniel</td>
+                      <td class="text-center">44567</td>
+                      <td class="text-center">test@email.com</td>
+                      <td class="text-center">test2@email.com</td>
+                      <td class="text-center"><i class="mdi mdi-check-underline-circle" /></i></td>
+                      <td class="text-center"><button class="btn btn-success">Download</button></td>
+                        <td class="text-center"><button class="btn btn-primary">Export</button></td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><input type="checkbox" id="checkbox_tick" /></td>
+  
+                      <td class="text-center">Alex Daniel</td>
+                      <td class="text-center">44567</td>
+                      <td class="text-center">test@email.com</td>
+                      <td class="text-center">test2@email.com</td>
+                      <td class="text-center"><i class="mdi mdi-check-underline-circle" /></i></td>
+                      <td class="text-center"><button class="btn btn-success">Download</button></td>
+                        <td class="text-center"><button class="btn btn-primary">Export</button></td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+                <br />
+                <button class="btn btn-danger">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+{%endblock%}

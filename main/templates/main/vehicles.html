@@ -1,0 +1,211 @@
+{%extends 'main/base.html'%} {%block content%}
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-12 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Vehicles Reports</h4>
+            <div class="table-responsive">
+              <table class="table text-align-center">
+                <div class="text-center">
+                  <select class="form-control">
+                    <option value="1">Delete selected</option>
+                    <option value="1">Export selected</option>
+                    <option value="1">Print selected</option>
+                  </select>
+                </div>
+                <thead>
+                  <tr>
+                    <th class="text-center">
+                      <input onchange="checkCheckbox()" type="checkbox" />
+                      Select All
+                    </th>
+                    <th class="text-center">Customer Name</th>
+                    <th class="text-center">Vehicle No</th>
+                    <th class="text-center">Receipent Name</th>
+                    <th class="text-center">Event Type</th>
+                    <th class="text-center">Receipent Mobile No</th>
+                    <th class="text-center">Update</th>
+                    <th class="text-center">Export</th>
+                    <th class="text-center">Locate On Map</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">
+                      <input type="checkbox" id="checkbox_tick" />
+                    </td>
+
+                    <td class="text-center">Alex Daniel</td>
+                    <td class="text-center">44567</td>
+                    <td class="text-center">Alex Danial</td>
+                    <td class="text-center">All</td>
+                    <td class="text-center">+977 98243</td>
+                    <td class="text-center">
+                      <button
+                        onclick="toggle_form_edit()"
+                        class="btn btn-secondary"
+                      >
+                        Update
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <button class="btn btn-primary">Export</button>
+                    </td>
+                    <td class="text-center">
+                      <a href="/maps" class="btn btn-danger">Locate</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <input type="checkbox" id="checkbox_tick" />
+                    </td>
+
+                    <td class="text-center">Alex Daniel</td>
+                    <td class="text-center">44567</td>
+                    <td class="text-center">Alex Danial</td>
+                    <td class="text-center">All</td>
+                    <td class="text-center">+977 98243</td>
+                    <td class="text-center">
+                      <button
+                        onclick="toggle_form_edit()"
+                        class="btn btn-secondary"
+                      >
+                        Update
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <button class="btn btn-primary">Export</button>
+                    </td>
+                    <td class="text-center">
+                      <a href="/maps" class="btn btn-danger">Locate</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <input type="checkbox" id="checkbox_tick" />
+                    </td>
+
+                    <td class="text-center">Alex Daniel</td>
+                    <td class="text-center">44567</td>
+                    <td class="text-center">Alex Danial</td>
+                    <td class="text-center">All</td>
+                    <td class="text-center">+977 98243</td>
+                    <td class="text-center">
+                      <button
+                        onclick="toggle_form_edit()"
+                        class="btn btn-secondary"
+                      >
+                        Update
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <button class="btn btn-primary">Export</button>
+                    </td>
+                    <td class="text-center">
+                      <a href="/maps" class="btn btn-danger">Locate</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <input type="checkbox" id="checkbox_tick" />
+                    </td>
+
+                    <td class="text-center">Alex Daniel</td>
+                    <td class="text-center">44567</td>
+                    <td class="text-center">Alex Danial</td>
+                    <td class="text-center">All</td>
+                    <td class="text-center">+977 98243</td>
+                    <td class="text-center">
+                      <button
+                        onclick="toggle_form_edit()"
+                        class="btn btn-secondary"
+                      >
+                        Update
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <button class="btn btn-primary">Export</button>
+                    </td>
+                    <td class="text-center">
+                      <a href="/maps" class="btn btn-danger">Locate</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <button class="btn btn-danger">Confirm</button>
+              <button onclick="toggle_form_add()" class="btn btn-success">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form id="add-form" class="card p-4 add-form-display">
+      <h3>Add Vehicle</h3>
+      <hr />
+      <div class="form-group">
+        <label>Vehicle Name</label>
+        <input type="text" placeholder="vechile name" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Receipent Name</label>
+        <input type="text" placeholder="vechile name" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Vehicle No</label>
+        <input type="text" placeholder="vechile no" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label> Email</label>
+        <input
+          type="email"
+          placeholder="email@email.com"
+          class="form-control"
+        />
+      </div>
+      <button class="btn btn-primary">Add Vehicle</button>
+    </form>
+    <br />
+    <form id="edit-form" class="card p-4 edit-form-display">
+      <h3>Update Vehicle</h3>
+      <hr />
+      <div class="form-group">
+        <label>Vehicle Name</label>
+        <input type="text" placeholder="vechile name" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Receipent Name</label>
+        <input type="text" placeholder="vechile name" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label>Vehicle No</label>
+        <input type="text" placeholder="vechile no" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label> Email</label>
+        <input
+          type="email"
+          placeholder="email@email.com"
+          class="form-control"
+        />
+      </div>
+      <button class="btn btn-primary">Update Vehicle</button>
+    </form>
+  </div>
+</div>
+<script>
+  const add_form = document.getElementById("add-form");
+  const edit_form = document.getElementById("edit-form");
+  function toggle_form_add() {
+    add_form.classList.toggle("add-form-display");
+  }
+  function toggle_form_edit() {
+    edit_form.classList.toggle("edit-form-display");
+  }
+</script>
+
+{%endblock%}

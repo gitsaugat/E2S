@@ -13,3 +13,15 @@ def settings(request):
 
 def maps(request):
     return render(request, 'main/map.html')
+
+
+def email_status(request):
+    return render(request, 'main/emailstatus.html')
+
+
+def sms_status(request):
+    return render(request, 'main/smsstatus.html')
+
+
+def vehicles(request):
+    return render(request, 'main/vehicles.html')
